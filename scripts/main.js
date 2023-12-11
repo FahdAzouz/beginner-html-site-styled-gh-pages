@@ -1,6 +1,11 @@
-const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello World!";
+const myImage = document.querySelector("img");
 
-document.querySelector("html").addEventListener("click", () => {
-    alert("Ouch! Stop poking me!");
-});
+myImage.onclick = () => {
+	const mySrc = myImage.getAttribute("src");
+	if (mySrc === "images/firefox-icon.png") {
+		myImage.setAttribute("src", "images/firefox2.png");
+	}
+	else {
+		myImage.setAttribute("src", "images/firefox-icon.png");
+	}
+};
